@@ -1,0 +1,23 @@
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <form class="form-control"  (ngSubmit)="onFormSubmit(f)" #f="ngForm">
+
+              <label for="email" >Email:</label>
+              <input type="email" id="email" class="form-control" name="email" #email="ngModel" ngModel required >
+              <span *ngIf="email.invalid && email.touched"> <p class="text-danger">*This field is required.</p></span>
+
+              <label for="password" >Password:</label>
+              <input type="password" class="form-control" name="password" #pass="ngModel" ngModel required >
+              <span *ngIf="pass.invalid && pass.touched"> <p class="text-danger">*This field is required.</p></span>
+
+              <div class="text-center">
+                <button [disabled]="f.invalid" class="btn btn-success" type="submit">Login</button> | <a routerLink="/forgetpassword"> forget password </a>
+              |  <a routerLink="/signup">Create New Account</a>
+              </div>
+      </form>
+    </div>
+  </div>
+</div>
+

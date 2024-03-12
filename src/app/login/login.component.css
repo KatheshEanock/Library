@@ -1,0 +1,11 @@
+.container {
+  margin-top: 50px; /* Add some top margin to center the form vertically */
+}
+
+.form-control {
+  margin-bottom: 10px; /* Add some bottom margin to each form field */
+}
+
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+}
